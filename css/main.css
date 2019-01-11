@@ -1,45 +1,136 @@
-*,::before,::after{
+.unselectable {
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Chrome/Safari/Opera */
+    -khtml-user-select: none;
+    /* Konqueror */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+}
+
+body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    width: 100%;
-}
-
-body{
-    height: 100vh;
     overflow: hidden;
-}
-.canvas_wrap{
-    position: relative;
-    width: 100%;
-    height: 100Vh;
+    font-family: 'Courier New', Courier, monospace;
 }
 
-.desc_card{
-    position: absolute;
-    width: 400px;
-    height: 400px;
-    background: rgba(0,0,0,.4);
-    border-radius: 200px;
-    z-index: 1000;
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    width: 100%;
+    height: 10vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: rgb(209, 206, 206);
-    text-align: center;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 2vw;
+}
+
+.logo {
+    width: 50%;
+}
+
+ul {
+    width: 50%;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: whitesmoke;
+}
+
+ul li {
+    position: relative;
+    cursor: pointer;
+    padding: 10px;
+}
+
+li span {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 1px;
+    background: rgba(255, 255, 255, 1);
     transition: .3s;
+}
+
+li:hover {
+    background: rgba(0, 0, 0, .2);
+}
+
+li:hover span {
+    left: 0;
+    width: 100%;
+}
+
+.canvas_wrap {
+    width: 400%;
+    height: 100vh;
+    transition: 1s;
+    perspective: 10000px;
+}
+
+canvas {
+    background: blue;
+    margin: 0;
+    padding: 0;
+}
+
+.card {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    border-radius: 200px;
+    font-family: 'Courier New', Courier, monospace;
+    color: whitesmoke;
+    font-size: 2.1vw;
+    transition: .3s;
+}
+
+.front,
+.back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    background: rgb(22, 22, 22);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    backface-visibility: hidden;
+    transition: .6s ease;
+    box-shadow: 0 0 4px 6px rgba(0, 0, 0, .8);
     cursor: pointer;
 }
 
-.desc_card:hover{
-    box-shadow: 0 0 10px 4px rgba(0,0,0,.4);
-    transform: scale(1.1);
-    color: rgb(255, 255, 255);
-
+.back {
+    transform: rotateY(180deg);
 }
 
-canvas{
-    z-index: 100;
+.portfolio {
+    position: absolute;
+    background: rgba(0, 0, 0, .4);
+    border: 5px solid;
+    transition: 1.8s ease-in-out;
+    transform: rotateZ(45deg) rotateY(-90deg);
+}
+
+.prices{
+    position: absolute;
+    display: flex;
+    perspective: 1000px;
+}
+
+.price_card{
+    background: #000;
+    transition: .3s;
 }

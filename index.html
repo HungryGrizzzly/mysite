@@ -4,21 +4,38 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Разработка сайтов под ключ</title>
+    <title>Canvas</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+    <script src="/js/libs/jquery.js"></script>
 </head>
 
 <body>
-    <div class="canvas_wrap">
-        <canvas id='myCanvas'></canvas>
-        <div class="desc_card">
-            РАЗРАБОТКА САЙТОВ<br> ПОД КЛЮЧ
-        </div>
+    <div class="menu">
+        <div class="logo"></div>
+        <ul>
+            <li id="home-link" data-num="0" data-current="true"  class="unselectable">ГЛАВНАЯ<span></span></li>
+            <li id='portfolio-link' data-num="1" data-current="false" class="unselectable">ПОРТФОЛИО<span></span></li>
+            <li id="prices-link" data-num="2" data-current="false" class="unselectable">ЦЕНЫ<span></span></li>
+            <li id="contacts-link" data-num="3" data-current="false" class="unselectable">КОНТАКТЫ<span></span></li>
+        </ul>
     </div>
+    <div class="canvas_wrap">
+        <div class="card">
+            <div class="front unselectable" data-current="1"></div>
+            <div class="back unselectable" data-current="0"></div>
+        </div>
+        <canvas id="myCanvas">
+        </canvas>
+    </div>
+    <script src="/js/cards.js"></script>
+    <script src="js/circle.js"></script>
+    <script src="js/snowflake.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="js/portfolio.js"></script>
+    <script src="js/prices.js"></script>
 
 </body>
-<script src="js/canvas.js"></script>
-<script src="js/main.js"></script>
 
 </html>
