@@ -16,7 +16,8 @@ body {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: Helvetica Bold Oblique;
+    cursor: none;
 }
 
 .menu {
@@ -41,13 +42,15 @@ ul {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    color: whitesmoke;
+    color: rgb(241, 212, 175);
 }
 
 ul li {
     position: relative;
-    cursor: pointer;
     padding: 10px;
+    font-family: Gotham;
+    font-size: .8vw;
+    letter-spacing: 2px;
 }
 
 li span {
@@ -56,12 +59,12 @@ li span {
     left: 50%;
     width: 0;
     height: 1px;
-    background: rgba(255, 255, 255, 1);
+    background: rgba(195, 203, 0);
     transition: .3s;
 }
 
 li:hover {
-    background: rgba(0, 0, 0, .2);
+    background: rgba(15, 17, 0, .2);
 }
 
 li:hover span {
@@ -87,14 +90,14 @@ canvas {
     width: 400px;
     height: 400px;
     border-radius: 200px;
-    font-family: 'Courier New', Courier, monospace;
-    color: whitesmoke;
+    font-family: Gotham;
+    color: rgba(241, 212, 175);
     font-size: 2.1vw;
     transition: .3s;
 }
 
-.front,
-.back {
+.card .front,
+.card .back {
     position: absolute;
     top: 0;
     left: 0;
@@ -109,28 +112,20 @@ canvas {
     backface-visibility: hidden;
     transition: .6s ease;
     box-shadow: 0 0 4px 6px rgba(0, 0, 0, .8);
-    cursor: pointer;
 }
 
 .back {
     transform: rotateY(180deg);
 }
 
-.portfolio {
-    position: absolute;
-    background: rgba(0, 0, 0, .4);
-    border: 5px solid;
-    transition: 1.8s ease-in-out;
-    transform: rotateZ(45deg) rotateY(-90deg);
-}
 
-.prices{
+.cursor{
     position: absolute;
-    display: flex;
-    perspective: 1000px;
-}
-
-.price_card{
-    background: #000;
-    transition: .3s;
+    top: 0;left: 0;
+    width: 15px;
+    height: 15px;
+    border-radius:8px;
+    background: wheat;
+    border: 1px solid;
+    z-index: 10000;
 }

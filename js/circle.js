@@ -11,7 +11,7 @@ function Circle(i, radius) {
     this.draw = () => {
         ctx.beginPath();
         ctx.arc(innerWidth / 2 + this.largeRadius * Math.cos(this.f), innerHeight / 2 + this.largeRadius * Math.sin(this.f), this.radius, 0, 2 * Math.PI, false);
-        ctx.fillStyle = 'rgb(0,0,0)';
+        ctx.fillStyle = 'rgb(15,17,0)';
         ctx.fill();
     }
 }

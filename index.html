@@ -4,17 +4,22 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Canvas</title>
+    <title>Разработка сайтов под ключ</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+    <link rel="stylesheet" type='text/css' media="screen" href="css/portfolio.css">
+    <link rel="stylesheet" type='text/css' media="screen" href="css/prices.css">
+    <link rel="stylesheet" type='text/css' media="screen" href="fonts/fonts.css">
     <script src="/js/libs/jquery.js"></script>
+    <script src="js/libs/randomNumbers.js"></script>
 </head>
 
 <body>
     <div class="menu">
+        <div id="cursor" class="cursor"></div>
         <div class="logo"></div>
         <ul>
-            <li id="home-link" data-num="0" data-current="true"  class="unselectable">ГЛАВНАЯ<span></span></li>
+            <li id="home-link" data-num="0" data-current="true" class="unselectable">ГЛАВНАЯ<span></span></li>
             <li id='portfolio-link' data-num="1" data-current="false" class="unselectable">ПОРТФОЛИО<span></span></li>
             <li id="prices-link" data-num="2" data-current="false" class="unselectable">ЦЕНЫ<span></span></li>
             <li id="contacts-link" data-num="3" data-current="false" class="unselectable">КОНТАКТЫ<span></span></li>
@@ -35,6 +40,7 @@
     <script src="/js/main.js"></script>
     <script src="js/portfolio.js"></script>
     <script src="js/prices.js"></script>
+    <script src="js/cursor.js"></script>
 
 </body>
 

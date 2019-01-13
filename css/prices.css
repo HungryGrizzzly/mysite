@@ -1,0 +1,48 @@
+.prices {
+    position: absolute;
+    display: flex;
+    perspective: 10000px;
+    filter: drop-shadow(20px 20px 100px rgba(0, 0, 0, .6));
+}
+
+.price_card {
+    transition: .3s;
+}
+
+.price_front,
+.price_back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transition: .3s;
+}
+
+.price_front {}
+
+.price_card:hover .price_front {
+    transform: rotateY(180deg);
+}
+
+.price_card:hover .price_back {
+    transform: rotateY(0);
+}
+
+.price_back {
+    transform: rotateY(180deg);
+    background: wheat;
+}
+
+.price_card:nth-child(1) .price_front {
+    background: url('/assets/prices1.jpg');
+}
+
+.price_card:nth-child(2) .price_front {
+    background: url('/assets/prices2.jpg');
+}
+
+.price_card:nth-child(3) .price_front {
+    background: url('/assets/prices3.jpg');
+}

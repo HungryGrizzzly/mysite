@@ -19,7 +19,7 @@ for (let i = 0; i < 100; i++) {
 function animate() {
     requestAnimationFrame(animate);
     ctx.clearRect(0, 0, innerWidth * 4, innerHeight);
-    ctx.fillStyle = '#343434';
+    ctx.fillStyle = 'rgb(51,42,42)';
     ctx.fillRect(0, 0, innerWidth * 4, innerHeight);
 
     snowflakesArray.map(snowflake => {
@@ -68,3 +68,4 @@ $('#contacts-link').click(() => {
     hidePortfolio();
     hidePrices();
 })
+
